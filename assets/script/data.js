@@ -5,10 +5,10 @@ const DATA = {
         title: "JavaScript",
         icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/js.png",
       },
-      // java: {
-      //   title: "Java",
-      //   icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/java.png",
-      // },
+      typescript: {
+        title: "TypeScript",
+        icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/ts.png",
+      },
       python: {
         title: "Python",
         icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/python.png",
@@ -28,21 +28,29 @@ const DATA = {
         title: "React JS",
         icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/react.png",
       },
-      bootstrap: {
-        title: "Bootstrap",
-        icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/bootstrap.png",
+      zustand: {
+        title: "Zustand",
+        icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/zustand.png",
+      },
+      "react query": {
+        title: "TanStack Query",
+        icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/react-query.png",
       },
     },
 
     backend: {
       node: {
-        title: "Node JS",
+        title: "Node.js",
         icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/node.png",
       },
       express: {
-        title: "Express JS",
+        title: "Express.js",
         icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/express.png",
       },
+      // "REST APIs": {
+      //   title: "REST APIs",
+      //   icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/api-2.png",
+      // },
     },
 
     databases: {
@@ -50,10 +58,10 @@ const DATA = {
         title: "MongoDB",
         icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/mongodb.png",
       },
-      // mysql: {
-      //   title: "MySQL",
-      //   icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/mysql.png",
-      // },
+      postgreSQL: {
+        title: "PostgreSQL",
+        icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/postgresql.png",
+      },
     },
 
     // TOOLS & CLOUD
@@ -66,16 +74,16 @@ const DATA = {
         title: "GitHub",
         icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/github.png",
       },
-      vscode: {
-        title: "VS code",
-        icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/vscode.png",
+      postman: {
+        title: "Postman",
+        icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/postman.png",
       },
-      webpack: {
-        title: "Webpack",
-        icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/webpack.png",
+      cloudinary: {
+        title: "Cloudinary",
+        icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/cloudinary.png",
       },
       firebase: {
-        title: "firebase",
+        title: "Firebase",
         icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/firebase.png",
       },
       // cloudflare: {
@@ -87,19 +95,99 @@ const DATA = {
 
   projects: [
     {
-      title: "Single Vendor Ecommerce Site",
+      title: "eKart - Full Stack E-commerce Platform",
+      category: "FULL STACK",
       description:
-        "Built a full-stack single-vendor e-commerce application with secure authentication, product management, order handling, and Razorpay payment integration with backend verification",
-      image: "assets/images/eKart-Frontend.png",
+        "A full-stack single-vendor e-commerce platform with secure authentication, role-based access control, backend-only pricing, and Razorpay payment integration with verification.",
+      image: "assets/images/eKart.png",
       link: "https://ekart-frontend.pages.dev/",
+      githubLink: "https://github.com/sn0914r/eKart-system",
+      features: [
+        "JWT Authentication & Refresh Tokens",
+        "RBAC & Backend-only Pricing",
+        "Razorpay Payment Verification",
+        "Modular $ Scalable Backend Architecture",
+      ],
+      techStack: [
+        {
+          name: "React",
+          icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/react.png",
+        },
+        {
+          name: "Node.js",
+          icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/node.png",
+        },
+        {
+          name: "Express.js",
+          icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/express.png",
+        },
+        {
+          name: "MongoDB",
+          icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/mongodb.png",
+        },
+        {
+          name: "Razorpay",
+          icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/razorpay.png",
+        },
+        {
+          name: "JWT",
+          icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/jwt.png",
+        },
+        {
+          name: "Cloudinary",
+          icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/cloudinary.png",
+        },
+        {
+          name: "Zustand",
+          icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/zustand.png",
+        },
+      ],
       tags: ["React", "Node Js", "Razorpay", "Firebase", "Express"],
     },
     {
-      title: "TrafficPulse Analytics Landing Page",
+      title: "Mock API AI – Dynamic Mock REST API Platform",
+      category: "FULLSTACK + AI Integration",
       description:
-        "Designed and built a clean, responsive business website with multiple pages (services, about, contact) and smooth UI interactions for a professional web presence.",
-      image: "assets/images/traffic-pulse.png",
-      link: "https://trafficpulse-landing-page.pages.dev/",
+        "An AI-powered mock API generator that creates realistic fake data using Gemini AI and serves it through a RESTful API with PostgreSQL storage.",
+      image: "assets/images/mock-api-ai.png",
+      link: "https://mock-api-ai.pages.dev/",
+      githubLink: "https://github.com/sn0914r/mock-api-ai-system",
+      features: [
+        "AI Generated Mock APIs using Groq AI",
+        "Dynamic Schema & CRUD Route Generation",
+        "PostgreSQL JSONB Database Integration",
+        "Runtime Validation with Zod",
+      ],
+      techStack: [
+        {
+          name: "React",
+          icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/react.png",
+        },
+        {
+          name: "Node.js",
+          icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/node.png",
+        },
+        {
+          name: "Express.js",
+          icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/express.png",
+        },
+        {
+          name: "PostgreSQL",
+          icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/postgresql.png",
+        },
+        {
+          name: "TypeScript",
+          icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/ts.png",
+        },
+        {
+          name: "Groq AI",
+          icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/groq.webp",
+        },
+        {
+          name: "Zod",
+          icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/zod.png",
+        },
+      ],
       tags: ["HTML", "CSS", "Javascript", "Bootstrap"],
     },
     // {

@@ -10,7 +10,9 @@ export default function initCanvas() {
   function init() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    dots = Array.from({ length: 500 }, () => ({
+    const isMobile = window.innerWidth < 768;
+    const numDots = isMobile ? 125 : 500;
+    dots = Array.from({ length: numDots }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
       vx: (Math.random() - 0.5) * 0.5,
@@ -58,7 +60,9 @@ export function initCanvasMain() {
     canvasMain.height = main.offsetHeight;
 
     // Create dots for main canvas
-    dots = Array.from({ length: 200 }, () => ({
+    const isMobile = window.innerWidth < 768;
+    const numDots = isMobile ? 50 : 200;
+    dots = Array.from({ length: numDots }, () => ({
       x: Math.random() * canvasMain.width,
       y: Math.random() * canvasMain.height,
       vx: (Math.random() - 0.5) * 0.5,

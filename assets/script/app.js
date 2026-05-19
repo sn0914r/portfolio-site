@@ -29,8 +29,7 @@ function addProjects() {
   let html = "";
 
   DATA.projects.forEach((project) => {
-    const { title, description, image, link, tags } = project;
-    html += projectCardHTML(link, image, title, description, tags);
+    html += projectCardHTML(project);
   });
 
   projects.innerHTML = html;
