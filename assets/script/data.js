@@ -47,10 +47,10 @@ const DATA = {
         title: "Express.js",
         icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/express.png",
       },
-      // "REST APIs": {
-      //   title: "REST APIs",
-      //   icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/api-2.png",
-      // },
+      "REST APIs": {
+        title: "REST APIs",
+        icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/restapi-new.png",
+      },
     },
 
     databases: {
@@ -61,6 +61,10 @@ const DATA = {
       postgreSQL: {
         title: "PostgreSQL",
         icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/postgresql.png",
+      },
+      redis: {
+        title: "Redis",
+        icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/redis.png",
       },
     },
 
@@ -73,6 +77,14 @@ const DATA = {
       github: {
         title: "GitHub",
         icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/github.png",
+      },
+      docker: {
+        title: "Docker",
+        icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/docker.png",
+      },
+      openapi: {
+        title: "OpenAPI/Scalar",
+        icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/openapi.png",
       },
       postman: {
         title: "Postman",
@@ -98,15 +110,41 @@ const DATA = {
       title: "eKart - Full Stack E-commerce Platform",
       category: "FULL STACK",
       description:
-        "A full-stack single-vendor e-commerce platform with secure authentication, role-based access control, backend-only pricing, and Razorpay payment integration with verification.",
+        "A full-stack e-commerce platform with secure authentication, role-based access control, backend-only pricing, and Razorpay payment integration with server-side verification.",
       image: "assets/images/eKart.png",
-      link: "https://ekart-frontend.pages.dev/",
-      githubLink: "https://github.com/sn0914r/eKart-system",
+      links: [
+        {
+          label: "Customer Store",
+          url: "https://ekart-frontend.pages.dev/auth/login?email=user123@gmail.com&password=user123",
+        },
+        {
+          label: "Admin Panel",
+          url: "https://ekart-admin-dashboard.pages.dev/auth/login?email=admin123@gmail.com&password=admin123",
+        },
+        {
+          label: "API Docs",
+          url: "https://ekart-backend-s0x7.onrender.com/docs",
+        },
+      ],
+      githubLinks: [
+        {
+          label: "Frontend",
+          url: "https://github.com/sn0914r/ekart-frontend",
+        },
+        {
+          label: "Admin Panel",
+          url: "https://github.com/sn0914r/ekart-admin-panel",
+        },
+        {
+          label: "Backend",
+          url: "https://github.com/sn0914r/ekart-backend",
+        },
+      ],
       features: [
-        "JWT Authentication & Refresh Tokens",
+        "JWT Authentication & Refresh Token Rotation",
         "RBAC & Backend-only Pricing",
         "Razorpay Payment Verification",
-        "Modular $ Scalable Backend Architecture",
+        "Snapshot-based Order Items & Idempotency Handling",
       ],
       techStack: [
         {
@@ -141,6 +179,18 @@ const DATA = {
           name: "Zustand",
           icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/zustand.png",
         },
+        {
+          name: "Docker",
+          icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/docker.png",
+        },
+        {
+          name: "Redis",
+          icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/redis.png",
+        },
+        {
+          name: "OpenAPI/Scalar",
+          icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/openapi.png",
+        },
       ],
       tags: ["React", "Node Js", "Razorpay", "Firebase", "Express"],
     },
@@ -148,14 +198,32 @@ const DATA = {
       title: "Mock API AI – Dynamic Mock REST API Platform",
       category: "FULLSTACK + AI Integration",
       description:
-        "An AI-powered mock API generator that creates realistic fake data using Gemini AI and serves it through a RESTful API with PostgreSQL storage.",
+        "An AI-powered platform that generates mock REST APIs, schemas, and CRUD operations from natural language prompts, backed by PostgreSQL.",
       image: "assets/images/mock-api-ai.png",
-      link: "https://mock-api-ai.pages.dev/",
-      githubLink: "https://github.com/sn0914r/mock-api-ai-system",
+      links: [
+        {
+          label: "Open App",
+          url: "https://mock-api-ai.pages.dev",
+        },
+        {
+          label: "API Docs",
+          url: "https://site--mock-api-ai-backend--gxd2ltpdfxvn.code.run/docs",
+        },
+      ],
+      githubLinks: [
+        {
+          label: "Frontend",
+          url: "https://github.com/sn0914r/mock-api-ai-frontend",
+        },
+        {
+          label: "Backend",
+          url: "https://github.com/sn0914r/mock-api-ai-backend",
+        },
+      ],
       features: [
         "AI Generated Mock APIs using Groq AI",
         "Dynamic Schema & CRUD Route Generation",
-        "PostgreSQL JSONB Database Integration",
+        "Interactive Playground with Real-time Request Editing",
         "Runtime Validation with Zod",
       ],
       techStack: [
@@ -186,6 +254,10 @@ const DATA = {
         {
           name: "Zod",
           icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/zod.png",
+        },
+        {
+          name: "OpenAPI/Scalar",
+          icon: "https://cdn.jsdelivr.net/gh/coach500/images-portfolio-site@main/images/openapi.png",
         },
       ],
       tags: ["HTML", "CSS", "Javascript", "Bootstrap"],

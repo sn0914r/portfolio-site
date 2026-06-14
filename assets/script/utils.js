@@ -2,7 +2,7 @@
 PROJECT CARD HTML STRUCTURE
 =================================== */
 export function projectCardHTML(project) {
-  const { title, category, description, image, link, githubLink, features, techStack } = project;
+  const { title, category, description, image, link, links, githubLink, githubLinks, features, techStack } = project;
 
   const featuresHTML = features && features.length ? `
     <div class="row mt-1">
@@ -45,7 +45,7 @@ export function projectCardHTML(project) {
           
           <h3 class="mb-2" style="font-size: 1.15rem; font-weight: 600; color: var(--text-primary);">${title}</h3>
           
-          <p class="mb-2" style="color: var(--text-primary); opacity: 0.85; line-height: 1.4; font-size: 0.8rem;">
+          <p class="mb-3" style="color: var(--text-primary); opacity: 0.85; line-height: 1.6; font-size: 0.8rem;">
             ${description}
           </p>
           
@@ -55,12 +55,44 @@ export function projectCardHTML(project) {
             ${techStackHTML}
             
             <div class="d-flex justify-content-end gap-3 mt-3">
-              ${link ? `<a href="${link}" target="_blank" class="text-decoration-none d-flex align-items-center gap-1" style="color: var(--text-secondary); transition: color 0.3s ease;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">
+              ${links ? `
+              <div class="dropdown">
+                <button class="btn btn-link text-decoration-none d-flex align-items-center gap-1 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="color: var(--text-secondary); transition: color 0.3s ease; padding: 0; box-shadow: none;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">
+                  <span style="font-size: 0.8rem;">Live Demo</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end shadow border-0" style="background-color: var(--bg-surface); min-width: 160px; outline: 1px solid var(--border);">
+                  ${links.map(l => `
+                  <li>
+                    <a class="dropdown-item d-flex align-items-center justify-content-between gap-2 py-2" href="${l.url}" target="_blank" style="color: var(--text-primary); font-size: 0.85rem;" onmouseover="this.style.backgroundColor='var(--bg-main)'" onmouseout="this.style.backgroundColor='transparent'">
+                      <span>${l.label}</span>
+                      <i class="bi bi-box-arrow-up-right" style="font-size: 0.75rem; opacity: 0.7;"></i>
+                    </a>
+                  </li>
+                  `).join('')}
+                </ul>
+              </div>
+              ` : link ? `<a href="${link}" target="_blank" class="text-decoration-none d-flex align-items-center gap-1" style="color: var(--text-secondary); transition: color 0.3s ease;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">
                 <span style="font-size: 0.8rem;">Live Demo</span>
                 <i class="bi bi-box-arrow-up-right" style="font-size: 0.75rem;"></i>
               </a>` : ""}
               
-              ${githubLink ? `<a href="${githubLink}" target="_blank" class="text-decoration-none d-flex align-items-center gap-1" style="color: var(--text-secondary); transition: color 0.3s ease;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">
+              ${githubLinks ? `
+              <div class="dropdown">
+                <button class="btn btn-link text-decoration-none d-flex align-items-center gap-1 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="color: var(--text-secondary); transition: color 0.3s ease; padding: 0; box-shadow: none;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">
+                  <span style="font-size: 0.8rem;">GitHub</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end shadow border-0" style="background-color: var(--bg-surface); min-width: 160px; outline: 1px solid var(--border);">
+                  ${githubLinks.map(l => `
+                  <li>
+                    <a class="dropdown-item d-flex align-items-center justify-content-between gap-2 py-2" href="${l.url}" target="_blank" style="color: var(--text-primary); font-size: 0.85rem;" onmouseover="this.style.backgroundColor='var(--bg-main)'" onmouseout="this.style.backgroundColor='transparent'">
+                      <span>${l.label}</span>
+                      <i class="bi bi-github" style="font-size: 0.75rem; opacity: 0.7;"></i>
+                    </a>
+                  </li>
+                  `).join('')}
+                </ul>
+              </div>
+              ` : githubLink ? `<a href="${githubLink}" target="_blank" class="text-decoration-none d-flex align-items-center gap-1" style="color: var(--text-secondary); transition: color 0.3s ease;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">
                 <span style="font-size: 0.8rem;">GitHub</span>
                 <i class="bi bi-github" style="font-size: 0.85rem;"></i>
               </a>` : ""}
